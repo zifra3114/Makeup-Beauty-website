@@ -1,0 +1,1031 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(to right, #210F11, #fff, #fff,#fff, #fff,#fff, #fff, #210F11);
+}
+ .navbar {
+   background-color: #210F11;
+    padding: 20px 40px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 40px;
+ z-index: 1000;   
+     position: fixed; 
+  top: 0;        
+  left: 0;
+  width: 100%;     
+}
+
+
+.logo h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  color: #f3c6c6;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-buttom {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-buttom li {
+  list-style: none;
+  font-family: 'Lobster', cursive;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-buttom li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: bisque;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-buttom li:hover {
+  color: bisque;
+}
+
+.nav-buttom li:hover::after {
+  width: 100%;
+}
+.nav-buttom a{
+    text-decoration: none;
+    color: white;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f3c6c6;
+  padding: 10px 12px;
+  border-radius: 20px;
+  gap: 8px;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+.search-container input::placeholder {
+  color: #f3c6c6;
+}
+
+.search-icon {
+  color: #f3c6c6;
+  font-size: 14px;
+}
+
+.hero-container {
+  background-image: url("./assets/Makeup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: Sekuya, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: -100px;
+  color: #efbcbc;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #f1f1f1;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.hero-content button {
+  padding: 14px 30px;
+  margin: 0 10px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.4s ease;
+font-family: 'Dancing Script', cursive;
+border: 1px solid white;
+}
+.book-btn{
+    background-color: #2e0c10;
+  color: #fff;
+  transition: all 0.4s ease;
+   box-shadow: 0px 0px 8px 10px rgba(194, 175, 175, 0.4);
+   
+}
+.book-btn:hover{
+  background-color: transparent;
+  transform: scale(1.1);
+}
+
+.look-btn{
+    background-color: white;
+  color: black;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 0.4);
+}
+.look-btn:hover{
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  transform: scale(1.1);
+}
+.makeup-section {
+  padding: 70px 40px;
+  text-align: center;
+  background: linear-gradient(to right, #210F11, #fff, #fff,#fff, #fff,#fff, #fff, #210F11);
+}
+
+.makeup-section h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 2.7rem;
+  margin-bottom: 50px;
+  color: #210F11;
+}
+.makeup-section h3 {
+  font-family: 'Lobster', cursive;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #6c2222;
+}
+/* Cards Wrapper */
+.makeup-cards {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+/* Single Card */
+.makeup {
+  background: #fff;
+  border-radius: 18px;
+  width: 350px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.makeup:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(33, 15, 17, 0.35);
+}
+
+/* Image */
+.makeup img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Text Area */
+.makeup h2 {
+   font-family: Sekuya, serif;
+  font-size: 1.2rem;
+  color: #210F11;
+  margin: 15px 0 8px;
+}
+
+.makeup p {
+  font-family: Lubster, cursive;
+  font-size: 0.95rem;
+  color: #6c2222;
+  padding: 0 15px;
+  margin-bottom: 18px;
+}
+
+/* Button */
+.makeup button {
+  margin-bottom: 22px;
+  padding: 15px 50px;
+  background: #210F11;
+  color: #fff;
+  font-family: Sekuya, serif;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  box-shadow: 0px 0px 10px 10px rgba(57, 1, 1, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.makeup button:hover {
+  background-color: #8b3a3f;
+  transform: scale(1.05);
+}
+.skinCare-section {
+  padding: 70px 40px;
+  text-align: center;
+   background: linear-gradient(to right, #210F11, #fff, #fff,#fff, #fff,#fff, #fff, #210F11);
+}
+
+.skinCare-section h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 2.6rem;
+  margin-bottom: 50px;
+  color: #210F11;
+}
+
+/* Products Row */
+.skincare-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skincare h2 {
+   font-family: Sekuya, serif;
+  font-size: 0.9rem;
+  color: #210F11;
+  margin: 15px 0 8px;
+}
+.skincare p {
+  font-family: Lubster, cursive;
+  font-size: 0.8rem;
+  color: #6c2222;
+  padding: 0 15px;
+  margin-bottom: 18px;
+}
+.skincare h3 {
+  font-family: 'Lobster', cursive;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #6c2222;
+}
+.skincare button {
+  margin-bottom: 22px;
+  padding: 12px 40px;
+  background: #210F11;
+  color: #fff;
+  font-family: Sekuya, serif;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  box-shadow: 0px 0px 10px 10px rgba(57, 1, 1, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.skincare button:hover {
+  background-color: #8b3a3f;
+  transform: scale(1.1);
+}
+/* Oval Image */
+.skincare img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50% / 35%;
+  border: 3px solid #210F11;
+  padding: 6px;
+  background: #fff;
+  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Effect */
+.skincare img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(33, 15, 17, 0.35);
+}
+/* Section */
+/* Section */
+.haircut-section {
+  text-align: center;
+  background: linear-gradient(to right, #210F11, #fff, #fff,#fff, #fff,#fff, #fff, #210F11);
+  padding: 60px 0;
+}
+
+/* Container */
+.hair-cuts {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Heading */
+.haircut-section h1 {
+  font-size: 39px;
+  margin-bottom: 40px;
+  font-family: 'Lobster', cursive;
+  color: #210F11;
+}
+
+/* Masonry / Column layout */
+.haircut-card {
+  column-count: 4;
+  column-gap: 30px;
+}
+
+/* Image box */
+.hair-type {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 20px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Taller images optional */
+.hair-type.taller img {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Images */
+.hair-type img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  transition: all 0.4s ease;
+}
+
+/* Overlay for content */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+  text-align: center;
+  padding: 15px;
+  border-radius: 18px;
+}
+
+.overlay h2 {
+  font-size: 20px;
+    color: #efbcbc;
+  margin-bottom: 8px;
+  font-family: Sekuya, serif;
+}
+
+.overlay p {
+  font-size: 18px;
+  font-family:  'Lobster', cursive;
+} 
+.overlay h3{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #f1f1f1;
+    font-family: 'Lobster', cursive;
+}
+
+/* Hover Effect */
+.hair-type:hover img {
+  filter: blur(3px);
+  transform: scale(1.05);
+}
+
+.hair-type:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .haircut-card {
+    column-count: 2;
+  }
+  .hair-type.taller img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .haircut-card {
+    column-count: 1;
+  }
+  .haircut-section h1 {
+    font-size: 26px;
+  }
+  .hair-type.taller img {
+    height: 300px;
+  }
+  .overlay h2 {
+    font-size: 20px;
+  }
+  .overlay p {
+    font-size: 16px;
+  }
+}
+
+/* ===== Service Section ===== */
+.service-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #210F11, #fff, #fff, #fff, #fff, #fff, #fff, #210F11);
+}
+
+.service-section h1 {
+  font-size: 39px;
+  margin-bottom: 50px;
+  font-family: 'Lobster', cursive;
+  color: #210F11;
+}
+
+.service {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  border: 1px solid grey;
+  background: #fff;
+  border-radius: 22px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 30px rgba(33, 15, 17, 0.15);
+  transition: all 0.4s ease;
+  width: 280px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(33, 15, 17, 0.25);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+.service-card h2 {
+  font-size: 19px;
+  color: #210F11;
+  margin-bottom: 10px;
+  font-family: Sekuya, serif;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: auto;
+  font-family: 'Lobster', cursive;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  color: #210F11;
+  margin: 15px 0;
+  font-weight: 600;
+  font-family: 'Lobster', cursive;
+}
+
+.service-card button {
+  padding: 12px 36px;
+  font-family: Sekuya, serif;
+  border: none;
+  border-radius: 10px;
+  background: #210F11;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-card button:hover {
+  background: #fff;
+  color: #210F11;
+  border: 1px solid #210F11;
+}
+
+@media (max-width: 768px) {
+  .service-section h1 {
+    font-size: 28px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+
+
+
+.contact-section {
+  padding: 80px 20px;
+  background: linear-gradient(
+    to right,
+    #210F11,
+    #fff,
+    #fff,
+    #fff,
+    #fff,
+    #fff,
+    #fff,
+    #210F11
+  );
+}
+
+/* CENTER WRAPPER */
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* FORM CARD */
+.contact-right {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid gray;
+}
+
+/* TEXT */
+.contact-right h2 {
+  text-align: center;
+  font-family: Sekuya ,serif;
+  color: #210F11;
+  margin-bottom: 10px;
+
+}
+
+.contact-right p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-family:  'Lobster', cursive;
+}
+
+/* FORM */
+.contact-right label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: 'Lobster', cursive;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-family: 'Lobster', cursive;
+}
+
+.contact-right textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* BUTTON */
+.contact-right button {
+  width: 100%;
+  padding: 14px;
+background-color: #2e0c10;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Sekuya, cursive;
+}
+
+.contact-right button:hover {
+  opacity: 0.9;
+}
+.footer {
+  background: #210f11;
+  color: #fff;
+  padding-top: 60px;
+}
+
+/* MAIN */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* BRAND */
+.logo h1 {
+  font-family: Lobster, cursive;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 1.1rem;
+  color: #f1cfd8;
+  line-height: 1.6;
+  font-family: Dancing Script, cursive;
+}
+
+/* LINKS */
+.footer-links h4 {
+  color: #ff7eb3;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-family: Dancing Script, cursive;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #f5dbe2;
+  cursor: pointer;
+  font-family: Lobster, cursive;
+  transition: 0.3s;
+}
+
+.footer-links li:hover {
+  color: #ff7eb3;
+  transform: translateX(6px);
+}
+
+/* CONTACT ICONS */
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info svg {
+  color: #ff7eb3;
+  font-size: 16px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #f5dbe2;
+  font-family: Dancing Script, cursive;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.social-icons svg {
+  color: #ff7eb3;
+  font-size: 18px;
+}
+
+.social-icons span:hover {
+  background: #ff7eb3;
+  box-shadow: 0 0 15px #ff7eb3;
+  transform: translateY(-5px);
+}
+
+.social-icons span:hover svg {
+  color: #210f11;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-info li {
+    justify-content: center;
+  }
+
+  .footer-links li:hover {
+    transform: none;
+  }
+}
+
+
+@media (max-width: 1200px){
+  .navbar{padding: 15px 25px;}
+  .hero-content h1{font-size: 2.2rem;}
+  .hero-content p{font-size: 1.3rem;}
+}
+
+
+@media (max-width: 992px){
+
+  .navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+  .navbar-links{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-buttom{
+    gap: 18px;
+  }
+
+  /* HERO */
+  .hero-content h1{font-size: 2rem;}
+  .hero-content p{font-size: 1.2rem;}
+
+  /* MAKEUP */
+  .makeup{
+    width: 300px;
+  }
+
+  /* SKINCARE */
+  .skincare-products{
+    justify-content: center;
+  }
+
+  /* SERVICES */
+  .service-card{
+    width: 260px;
+    height: auto;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 768px){
+
+  /* NAVBAR */
+  .nav-buttom{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* HERO */
+  .hero-container{
+    height: 85vh;
+    padding: 20px;
+  }
+
+  .hero-content h1{
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+
+  .hero-content p{
+    font-size: 1.1rem;
+  }
+
+  .hero-content button{
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  /* MAKEUP */
+  .makeup-section{
+    padding: 40px 15px;
+  }
+
+  .makeup{
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* SKINCARE */
+  .skincare-products{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* HAIRCUT */
+  .haircut-card{
+    column-count: 2;
+  }
+
+  /* SERVICE */
+  .service{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card{
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* CONTACT */
+  .contact-right{
+    padding: 25px;
+  }
+
+  /* FOOTER */
+  .footer-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+@media (max-width: 480px){
+
+  /* HERO */
+  .hero-content h1{font-size: 1.5rem;}
+  .hero-content p{font-size: 1rem;}
+
+  /* MAKEUP */
+  .makeup img{
+    height: 260px;
+  }
+
+  /* SKINCARE */
+  .skincare img{
+    width: 160px;
+    height: 240px;
+  }
+
+  /* HAIRCUT */
+  .haircut-card{
+    column-count: 1;
+  }
+
+  /* SERVICE */
+  .service-card img{
+    height: 150px;
+  }
+
+  /* FOOTER */
+  .footer-container{
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom{
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+/* ========================= */
+/* EXTRA SMALL DEVICES */
+/* ========================= */
+@media (max-width: 360px){
+
+  .hero-content h1{font-size: 1.3rem;}
+  .hero-content p{font-size: 0.95rem;}
+
+  .makeup button,
+  .skincare button,
+  .service-card button{
+    padding: 10px 25px;
+    font-size: 11px;
+  }
+
+  .contact-right{
+    padding: 20px;
+  }
+}
+.menu-btn {
+  display: none; 
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #f3c6c6;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  /* Navbar links initially hidden */
+  .navbar-links {
+    display: none;
+    position: absolute; /* relative to navbar */
+    top: 100%;          /* neeche khulega logo + button ke */
+    left: 0;
+    width: 100%;
+    background: #210F11;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 100;
+  }
+
+  /* Show links on toggle */
+  .navbar-links.show {
+    display: flex;
+  }
+}
